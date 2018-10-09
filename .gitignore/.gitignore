@@ -1,0 +1,17 @@
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.idb
+*.obj
+*.pch
+*.ipch
+*.tlog
+*.VC.db
+*.suo
+*.vcxproj.user
+*.sdf
+*Debug
+*Release
+*.vs
