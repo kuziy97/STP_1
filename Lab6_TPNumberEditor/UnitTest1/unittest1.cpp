@@ -59,7 +59,7 @@ namespace TPNumberEditorTest
 		TEST_METHOD(WriteString)
 		{
 			TPNumberEditor test;
-			std::string number = "42";
+			std::string number = "-4-2";
 			test.setNumber(number);
 			Assert::AreEqual(test.getNumber(), number);
 		}

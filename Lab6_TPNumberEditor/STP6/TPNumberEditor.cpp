@@ -65,20 +65,21 @@ std::string TPNumberEditor::addSplit() {
 }
 
 
-void TPNumberEditor::setNumber(std::string &num) {
+void TPNumberEditor::setNumber(std::string num) {
 	bool flag = true;
 	uint32_t minus_c = 0, plus_c = 0;
-	for (auto &i : num) {
+	for (int n = 0; n < num.length(); ++n) {
+		char i = num[n];
 		if ((i >= '0' && i < '9') || i == '+' || i == '-' || i == '.' || (i >= 'A' && i <= 'F')) {
 			if (i == '+') {
-				if (i != 0) {
+				if (n != 0) {
 					flag = false;
 					break;
 				}
 			}
 			else {
 				if (i == '-') {
-					if (i != 0) {
+					if (n != 0) {
 						flag = false;
 						break;
 					}

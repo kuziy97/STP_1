@@ -20,7 +20,7 @@ public:
 
 	std::string addSplit();
 
-	void setNumber(std::string &num);
+	void setNumber(std::string num);
 
 	std::string getNumber() const;
 
