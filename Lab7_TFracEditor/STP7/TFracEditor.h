@@ -1,30 +1,48 @@
 #pragma once
+
 #include <string>
 
+enum Operations {
+	CHANGE_SIGN,
+	ADD_ZERO,
+	REMOVE_LAST_DIGIT,
+	CLEAR,
+	ADD_DIVIDER
+};
+
 class TFracEditor {
+private:
+	std::string fraction;
+
+	int gcd(int a, int b);
+
+	void reduction();
+
+	bool fractionValidation(std::string frac);
+
 public:
+	static const char DIVIDER;
+	static const std::string ZERO;
+
 	TFracEditor();
 
-	bool isZero();
+	bool isZeroFraction();
 
 	std::string changeSign();
 
-	std::string addDigit(unsigned int digit);
+	std::string addDigit(int digit);
 
 	std::string addZero();
 
-	std::string backspace();
+	std::string removeLastDigit();
 
 	std::string clear();
 
-	std::string addSplit();
+	std::string addDivider();
 
-	void setNumber(std::string &num);
+	void editFraction(Operations operation);
 
-	std::string getNumber() const;
+	void setFraction(std::string frac);
 
-	static const std::string ZERO;
-	static const char DIV_SIGN;
-private:
-	std::string number;
+	std::string getFraction();
 };
